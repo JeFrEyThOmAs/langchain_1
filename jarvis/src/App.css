@@ -1,0 +1,171 @@
+.jarvis-page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.jarvis-card {
+  width: min(760px, 100%);
+  border-radius: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  padding: 28px;
+  text-align: left;
+  backdrop-filter: blur(6px);
+}
+
+.jarvis-badge {
+  display: inline-block;
+  margin: 0 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--pill-border);
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  padding: 6px 12px;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.jarvis-subtitle {
+  margin: 0 0 24px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.jarvis-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.jarvis-form input {
+  flex: 1;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-h);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.jarvis-form input:focus {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.jarvis-form button {
+  border: none;
+  background: linear-gradient(120deg, #8b5cf6, #ec4899);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.jarvis-form button:disabled,
+.jarvis-form input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.jarvis-form button:hover {
+  filter: brightness(1.08);
+}
+
+.jarvis-output {
+  border: 1px solid var(--output-border);
+  background: var(--output-bg);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.jarvis-output h2 {
+  margin: 0 0 12px;
+}
+
+.recipe-placeholder {
+  margin: 0;
+  color: var(--muted);
+}
+
+.recipe-content h3 {
+  margin: 14px 0 8px;
+  color: var(--text-h);
+}
+
+.recipe-content p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.recipe-content ul,
+.recipe-content ol {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+}
+
+.recipe-content li {
+  margin: 6px 0;
+  line-height: 1.45;
+}
+
+.recipe-content {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.45;
+  color: var(--text-h);
+  white-space: normal;
+  word-break: break-word;
+}
+
+.jarvis-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.jarvis-loading p {
+  margin: 0;
+}
+
+.loader-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #8b5cf6;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .jarvis-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .jarvis-form {
+    flex-direction: column;
+  }
+
+  .jarvis-form button {
+    padding: 12px 16px;
+  }
+}
