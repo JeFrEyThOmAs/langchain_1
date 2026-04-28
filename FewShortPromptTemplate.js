@@ -34,6 +34,14 @@ const prompt = new FewShotPromptTemplate({
     inputVariables: ["myinput"],
 })
 
+// internally
+// for (const example of examples) {
+//     examplePrompt.format({
+//       input: example.input,
+//       output: example.output,
+//     });
+//   }
+
 const res = await prompt.format({
     myinput: "The patient is experiencing myocardial infarction characterized by chest pain radiating to the left arm, accompanied by diaphoresis and shortness of breath.",
 })
