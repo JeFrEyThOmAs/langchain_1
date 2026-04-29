@@ -1,0 +1,46 @@
+Retrieval-Augmented Generation (RAG)
+
+RAG is a technique used in AI applications where the system first retrieves relevant information from a given set of documents and then uses a language model to generate a response based on that information.
+
+In simple terms, RAG means:
+"Search first, then answer."
+
+Instead of relying only on pre-trained knowledge, the system looks into the provided data (like notes, PDFs, or text files) to find useful content before generating a response. This makes the answers more accurate and relevant to the user's data.
+
+How RAG works:
+
+1. Document Loading
+   The system loads data from files such as PDFs, text files, or web pages.
+
+2. Text Splitting
+   Large documents are broken into smaller chunks so they can be processed efficiently.
+
+3. Embeddings and Storage
+   Each chunk is converted into a numerical representation (embedding) and stored in a vector database.
+
+4. Retrieval
+   When a user asks a question, the system searches the database to find the most relevant chunks of information.
+
+5. Generation
+   The retrieved content is passed to a language model, which generates a final answer based on that information.
+
+Example:
+
+If a user uploads notes about databases and asks:
+"What is normalization?"
+
+The system will:
+
+* Retrieve the part of the notes that explains normalization
+* Use the language model to generate a clear and simple explanation
+
+Advantages of RAG:
+
+* Provides answers based on your own data
+* Reduces incorrect or made-up information
+* Makes AI responses more context-aware
+* Useful for applications like chatbots, study tools, and document assistants
+
+Conclusion:
+
+RAG combines information retrieval with AI-generated responses, allowing systems to answer questions using specific documents instead of only general knowledge.
