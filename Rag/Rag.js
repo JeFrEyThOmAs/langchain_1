@@ -9,6 +9,8 @@ import { MemoryVectorStore } from "@langchain/classic/vectorstores/memory";
 
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 
+import { OllamaEmbeddings } from "@langchain/ollama";
+
 
 // -----------------------------
 // STEP 1: LLM
@@ -48,9 +50,8 @@ const docs = await splitter.createDocuments([text]);
 // STEP 4: Gemini Embeddings
 // -----------------------------
 
-const embeddings = new GoogleGenerativeAIEmbeddings({
-  apiKey: process.env.GEMINI_API_KEY,
-  model: "embedding-001",
+const embeddings = new OllamaEmbeddings({
+  model: "nomic-embed-text",
 });
 
 
